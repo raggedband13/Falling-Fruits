@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.game {
+    background: url(img/sky.jpeg) no-repeat center / cover;
+    height: 100vh;
+}
+
+.grass {
+    background: url(img/grass.svg) repeat-x center bottom / 90px;
+    z-index: 1;
+    position: absolute;
+    height: 90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.game .container {
+    height: 100%;
+    position: relative;
+}
+
+.container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.objects {
+    position: relative;
+}
+
+.objects img {
+    width: 90px;
+    position: absolute;
+    top: 0;
+    cursor: grab;
+    animation: object linear forwards ;
+}
+
+@keyframes object {
+    100% {
+        top: calc(100vh - 100px);
+    }
+}
+
+.cart {
+    position: absolute;
+    bottom: -2px;
+    left: -185px;
+    z-index: 2;
+    transition: 500ms;
+}
+
+.game_txt {
+    position: absolute;
+    top: 25px;
+    right: -25px;
+    transform: translateX(100%);
+    position: absolute;
+}
+
+.life {
+    background-color: rgba(255,255,255, 0.4);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.points {
+    background-color: rgba(255,255,255, 0.4);
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 45px;
+}
+
+.sum {
+    color: rgba( 25, 25, 25 , 0.5);
+    font-size: 12px;
+}
+
+.number {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Start */
+
+.start {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.start_background {
+    background-color: rgba(255,255,255, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button_start {
+    font-size: 35px;
+    font-weight: 700;
+    padding: 35px 55px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    color: #fff;
+    background-color: rgb(0, 123, 255);
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.countdown {
+    font-size: 200px;
+    font-weight: 700;
+    position: relative;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0,0,0, 0.1);
+    display: none;
+    z-index: 999;
+}
+
+/* End */
+
+.end {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.end_container {
+    background-color: #fff;
+    width: 550px;
+    z-index: 2;
+    padding: 45px;
+    box-shadow: 0 25px 85px rgba(0,0,0, 0.4);
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 15px;
+}
+
+.number_end {
+    font-size: 75px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.end_points {
+    font-size: 12px;
+    color: rgba( 25, 25, 25 , 0.5);
+}
+
+.button_end {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 20px 35px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    background-color: rgb(0, 123, 255);
+    border-radius: 15px;
+    display: inline-block;
+}

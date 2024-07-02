@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Falling Fruits</title>
+</head>
+<body>
+    <div class="start">
+        <div class="start_background"></div>
+        <div class="button_start">Начать игру</div>
+        <p class="countdown">3</p>
+    </div>
+    <section class="game">
+        <div class="grass"></div>
+        <div class="container">
+            <div class="objects"></div>
+            <div class="cart">
+                <img src="img/cart.svg" alt="">
+            </div>
+            <div class="game_txt">
+                <div class="life">
+                    <img class="life_img" src="img/heart.svg" alt="">
+                    <img class="life_img" src="img/heart.svg" alt="">
+                    <img class="life_img" src="img/heart.svg" alt="">
+                </div>
+                <div class="points">
+                    <p class="sum">Количество очков</p>
+                    <p class="number">0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="end">
+        <div class="start_background"></div>
+        <div class="end_container">
+            <p class="number_end">0</p>
+            <p class="end_points">Количество набранных очков</p>
+            <div class="button_end">Начать заново</div>
+        </div>
+        <p class="countdown">3</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
